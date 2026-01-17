@@ -1,7 +1,7 @@
 import os
 
 # Configuration Discord
-DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1455362179212509184/8UvtJ4Zf_3MyZzCOuMtZ5C-2MXFwxo7ScHo8XAHe-OJNK5u5u3u8fgjZw5ptRfdSzZU5"
+DISCORD_WEBHOOK_URL = ""
 
 # Configuration des Logs
 LOG_DIR = os.path.join(os.getcwd(), "logs")
