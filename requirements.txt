@@ -1,0 +1,4 @@
+watchdog
+psutil
+requests
+pywin32
