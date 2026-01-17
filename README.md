@@ -125,13 +125,13 @@ _Detects anomalies, monitors persistence, and alerts via Discord without comprom
       ![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
       **An intelligent, local HIDS (Host-based Intrusion Detection System) for Windows.**  
-      *Detects anomalies, monitors persistence, and alerts via Discord without compromising privacy.*
+      _Detects anomalies, monitors persistence, and alerts via Discord without compromising privacy._
 
       [Features](#-features) • [Installation](#-installation) • [Configuration](#-configuration) • [Architecture](#-architecture)
 
       </div>
 
-      ---
+      ***
 
       ## 📖 Overview
 
@@ -142,7 +142,6 @@ _Detects anomalies, monitors persistence, and alerts via Discord without comprom
       ## 🚀 Features
 
       ### 🧠 Core Intelligence
-
       - **Threat Scoring Engine**: Every event is assigned a risk score. Alerts are triggered only when the cumulative risk threshold is breached (prevents spam).
       - **Smart Whitelisting**: Ignores trusted processes (Chrome, System) and supports SHA256 hash allow-listing.
       - **Local JSON Logging**: Full forensic trail stored locally (`logs/security_events.json`) for post-incident analysis.
@@ -160,12 +159,10 @@ _Detects anomalies, monitors persistence, and alerts via Discord without comprom
       ## 🛠️ Installation
 
       ### Prerequisites
-
       - **Windows 10 / 11**
       - **Python 3.8+**
 
       ### Quick Start
-
       1. **Clone the repository**
 
          ```bash
@@ -181,6 +178,7 @@ _Detects anomalies, monitors persistence, and alerts via Discord without comprom
 
       3. **Configure the Agent**
          Open `config.py` and set your Discord Webhook URL:
+
          ```python
          DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/..."
          ```
@@ -193,7 +191,6 @@ _Detects anomalies, monitors persistence, and alerts via Discord without comprom
       ## ⚙️ Configuration (`config.py`)
 
       You can fine-tune the agent's behavior to suit your needs:
-
       - **`ALERT_THRESHOLD`**: Adjust sensitivity (Default: `50`). Lower means more alerts.
       - **`WHITELIST_PATHS`**: Add full paths of trusted applications to ignore.
       - **`MONITORED_PATHS`**: customize which directories are watched.
@@ -206,11 +203,11 @@ _Detects anomalies, monitors persistence, and alerts via Discord without comprom
           A --> C(Process Monitor)
           A --> D(Registry Monitor)
           A --> E(Network Monitor)
-    
+
           B & C & D & E --> F{Threat Engine}
           F -- Check Whitelist --> G[Ignore]
           F -- Calculate Score --> H[Local Log (JSON)]
-    
+
           H --> I{Score > Threshold?}
           I -- Yes --> J[Discord Alert 🚨]
           I -- No --> K[Silent Log]
@@ -225,7 +222,6 @@ _Detects anomalies, monitors persistence, and alerts via Discord without comprom
       ## 🤝 Contributing
 
       Contributions are welcome! Please feel free to submit a Pull Request.
-
       1. Fork the project
       2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
       3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
@@ -236,7 +232,7 @@ _Detects anomalies, monitors persistence, and alerts via Discord without comprom
 
       Distributed under the MIT License. See `LICENSE` for more information.
 
-      ---
+      ***
 
       <div align="center">
         <sub>Built with ❤️ for Cyber Security Education</sub>
